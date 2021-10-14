@@ -56,16 +56,12 @@ median_filter = 1 # If not 0, a median filter is applied after skull stripping
 ''' For all pictures with a tumor '''
 
 # Set path
-path = "./original_images/yes"
+path = "./original_images/tumorous"
 
-# Get all directories 
-dirs = os.listdir(path)
-ls =[]
-for i in dirs:
-    d = glob.glob(path+'/'+i+'/*.png')
-    for j in d:
-        ls.append(j)
-        
+# Get all image path 
+d = glob.glob(path+'/*.png')
+for j in d:
+    ls.append(j)
         
 count = 0
 # For each image
@@ -171,15 +167,12 @@ for x in ls:
 ''' For all pictures without a tumor '''
 
 # Set path
-path = "./original_images/no"
+path = "./original_images/not_tumorous"
 
-# Get all directories 
-dirs = os.listdir(path)
-ls =[]
-for i in dirs:
-    d = glob.glob(path+'/'+i+'/*.png')
-    for j in d:
-        ls.append(j)
+# Get all image path 
+d = glob.glob(path+'/*.png')
+for j in d:
+    ls.append(j)
         
         
 count = 0
